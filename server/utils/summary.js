@@ -1,0 +1,1 @@
+export const summaryExample = "JavaScript (JS) is a lightweight interpreted (or just-in-time compiled) programming language"
