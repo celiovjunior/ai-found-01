@@ -1,0 +1,43 @@
+#form {
+  margin-top: 64px;
+  display: flex;
+  gap: 12px;
+}
+
+#form > input {
+  height: 48px;
+  width: 450px;
+  border: none;
+  color: var(--text-primary);
+  background: var(--input-surface);
+  border-radius: 5px;
+  padding: 0 12px;
+
+  font-size: 16px;
+}
+
+#form > input:focus {
+  outline: 2px solid var(--primary-mid);
+}
+
+#form > input:valid {
+  background: var(--background);
+}
+
+#form > button {
+  height: 48px;
+  width: 48px;
+  border: none;
+  border-radius: 5px;
+  background: var(--primary-mid);
+  transition: background-color .2s;
+}
+
+#form > button:hover {
+  background: #633bbc;
+}
+
+#form > button i {
+  font-size: 24px;
+  color: var(--text-primary);
+}
