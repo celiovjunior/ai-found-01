@@ -21,7 +21,7 @@
 }
 
 #form > input:valid {
-  background: var(--background);
+  background: var(--input-surface);
 }
 
 #form > button {
