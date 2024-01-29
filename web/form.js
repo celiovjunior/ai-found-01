@@ -6,6 +6,7 @@ const content = document.querySelector("#content")
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
+  content.classList.add("placeholder")
 
   const videoUrl = input.value
 
@@ -22,11 +23,11 @@ form.addEventListener("submit", async (e) => {
 
   content.textContent = "Making summary..."
 
-  const summary = await server.post("/summary", {
-    text: transcription.data.result,
-  })
+  // const summary = await server.post("/summary", {
+  //   text: transcription.data.result,
+  // })
 
-  content.textContent = summary.data.result
+  content.textContent = transcription.data.result
 
-  console.log(params)
+  content.classList.remove("placeholder")
 })
