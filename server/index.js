@@ -6,13 +6,14 @@ import { summarize } from './summarize.js'
 import { convert } from './convert.js';
 
 const app = express();
-const corsOptions = {
-  origin: ["https://ai-found-01.vercel.app/", "http://localhost:5173/"],
-  optionSuccessStatus: 200
-}
-app.use(cors(corsOptions));
-app.use(express.json());
 
+app.use(cors())
+app.use(express.json());
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Credentials', 'true');
+  next();
+})
 app.get('/summary/:id', async (req, res) => {
   try {
     await download(req.params.id)
