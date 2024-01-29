@@ -8,7 +8,7 @@ import { convert } from './convert.js';
 const app = express();
 
 app.use(cors({
-  origin: "https://ai-found-01.vercel.app/",
+  origin: "https://ai-found-01.vercel.app",
   credentials: true,
   allowedHeaders: "Content-Type, Authorization"
 }))
