@@ -1,12 +1,16 @@
-import cors from 'cors';
 import express from 'express';
+import cors from 'cors';
 import { download } from './download.js';
 import { transcribe } from './transcribe.js';
 import { summarize } from './summarize.js'
 import { convert } from './convert.js';
 
 const app = express();
-app.use(cors());
+const corsOptions = {
+  origin: ["https://ai-found-01.vercel.app/", "http://localhost:5173/"],
+  optionSuccessStatus: 200
+}
+app.use(cors(corsOptions));
 app.use(express.json());
 
 app.get('/summary/:id', async (req, res) => {
