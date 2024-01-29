@@ -9,6 +9,7 @@ const app = express();
 
 app.use(cors({
   origin: "https://ai-found-01.vercel.app",
+  methods:  'GET, POST, PUT, DELETE',
   credentials: true,
   allowedHeaders: "Content-Type, Authorization"
 }))
@@ -19,6 +20,7 @@ app.all((req, res, next) => {
   res.header('Access-Control-Allow-Credentials', 'true');
   next();
 })
+
 
 app.get('/summary/:id', async (req, res) => {
   try {
