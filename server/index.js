@@ -8,7 +8,7 @@ import { convert } from './convert.js';
 const app = express();
 
 app.use(cors({
-  origin: "https://ai-found-01.vercel.app",
+  origin: ["https://ai-found-01.vercel.app", "http://localhost:5173"],
   methods:  'GET, POST, PUT, DELETE',
   credentials: true,
   allowedHeaders: "Content-Type, Authorization"
@@ -18,9 +18,9 @@ app.use(express.json());
 app.all((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Credentials', 'true');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
   next();
 })
-
 
 app.get('/summary/:id', async (req, res) => {
   try {
@@ -33,7 +33,6 @@ app.get('/summary/:id', async (req, res) => {
   } catch (error) {
     return res.json({ error })
   }
-
 })
 app.post('/summary', async (req, res) => {
   try {
