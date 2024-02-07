@@ -4,12 +4,13 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "server": "node --watch server/index.js -no-warnings",
+    "server": "nodemon server/index.js -no-warnings",
     "web": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
+    "nodemon": "^3.0.3",
     "vite": "^5.0.8"
   },
   "dependencies": {
