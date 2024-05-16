@@ -5,7 +5,7 @@ export const download = (videoId) => new Promise((resolve, reject) => {
   const videUrl = `https://www.youtube.com/shorts/${videoId}`;
   ytdl(videUrl, { 
     quality: "lowestaudio",
-    filter: "audioonly" 
+    filter: "audioonly"
   })
   .on("info", (info) => {
     const seconds = info.formats[0].approxDurationMs / 1000;
