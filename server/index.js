@@ -10,13 +10,6 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.all((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Credentials', 'true');
-  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-  next();
-})
-
 app.get('/summary/:id', async (req, res) => {
   try {
     await download(req.params.id)
