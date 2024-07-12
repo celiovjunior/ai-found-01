@@ -33,4 +33,4 @@ export const convert = () => new Promise((resolve, reject) => {
       reject(error)
     })
     .save(outputPath)
-})
+}) // test
