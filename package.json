@@ -10,17 +10,17 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "nodemon": "^3.0.3",
+    "nodemon": "^3.1.7",
     "vite": "^5.0.8"
   },
   "dependencies": {
     "@xenova/transformers": "^2.14.1",
-    "axios": "^1.6.7",
+    "axios": "^1.7.9",
     "cors": "^2.8.5",
-    "express": "^4.18.2",
+    "express": "^4.21.2",
     "ffmpeg-static": "^5.2.0",
     "fluent-ffmpeg": "^2.1.2",
     "node-wav": "^0.0.2",
-    "ytdl-core": "^4.11.5"
+    "ytdl-core": "4.10.0"
   }
 }
